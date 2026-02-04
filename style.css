@@ -264,7 +264,7 @@
 
 .about-text p {
   margin-bottom: 1rem;
-  color: #f1f5f9; /* soft white */
+  color: #f1f5f9; 
   line-height: 1.8;
   font-size: 1.05rem;
   font-weight: 400;
@@ -474,7 +474,7 @@
 
  input::placeholder,
 textarea::placeholder {
-  color: white; /* change to any color you want */
+  color: white; 
   
 }
 
@@ -560,7 +560,7 @@ textarea::placeholder {
 
  /* Footer */
  footer {
-   background: #334155;
+   background: #2b2d30;
    padding: 2rem;
    text-align: center;
    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
