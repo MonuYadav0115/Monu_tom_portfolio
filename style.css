@@ -20,13 +20,15 @@
    box-sizing: border-box;
  }
 
+/* Body css  */
  body {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background: #334155;
+   background:#0f172a;
    color: var(--text);
    line-height: 1.6;
    transition: var(--transition);
  }
+
 
  h2 {
    color: white;
@@ -34,8 +36,8 @@
 
  /* Header & Navigation */
  header {
-   background: #334155;
-   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+   background: #0f172a;
+   box-shadow: 0 4px 6px -1px rgba(15, 73, 47, 0.3);
    position: sticky;
    top: 0;
    z-index: 1000;
@@ -53,7 +55,7 @@
  .logo {
    font-size: 1.5rem;
    font-weight: 700;
-   color: #f8fafc;
+   color: rgba(255, 254, 254, 0.975);
  }
 
  .nav-links {
@@ -64,7 +66,7 @@
 
  .nav-links li a {
    text-decoration: none;
-   color: #f8fafc;
+   color: rgba(255, 254, 254, 0.975);
    font-weight: 500;
    transition: var(--transition);
    position: relative;
@@ -113,7 +115,7 @@
  }
 
  /* Hero Section */
- .hero {
+ /* .hero {
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -122,7 +124,55 @@
    background: linear-gradient(135deg, #51a8ff, #1a2634);
    color: white;
    padding: 0 2rem;
- }
+ } */
+  /* Hero Section - Updated HorizonX Style */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background: #0f172a;
+  padding: 0 2rem;
+}
+
+/* Green Center Glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(16,185,129,0.45) 0%, rgba(16,185,129,0.15) 40%, transparent 70%);
+  filter: blur(120px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Subtle Grid Overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* Keep hero content above background */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+ 
+
 
  .hero-content {
    max-width: 800px;
@@ -284,7 +334,7 @@
  }
 
  .skill-category {
-   background: #334155;
+   background: #242d39;
    padding: 1.5rem;
    border-radius: 8px;
    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -403,7 +453,7 @@
  }
 
  .project-links a:hover {
-   background: #000;
+   background: #262424;
    color: #fff;
    transform: translateY(-3px);
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -419,7 +469,7 @@
 
  /* Education Section */
  .education-item {
-   background: #3a4d68;
+   background: #1a2745;
    padding: 1.5rem;
    border-radius: 8px;
    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -460,7 +510,7 @@
    border: 1px solid #ddd;
    border-radius: 5px;
    font-family: inherit;
-   background: #3a4d68;
+   background: #0f172a;
    color: white;
    transition: var(--transition);
  }
@@ -504,7 +554,7 @@ textarea::placeholder {
  }
 
  .contact-info {
-   background: #3a4d68;
+   background: #14203c;
    padding: 2rem;
    border-radius: 10px;
    box-shadow: var(--shadow);
@@ -560,7 +610,7 @@ textarea::placeholder {
 
  /* Footer */
  footer {
-   background: #2b2d30;
+   background: #0c101a;
    padding: 2rem;
    text-align: center;
    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
