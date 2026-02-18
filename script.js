@@ -1,12 +1,12 @@
 // Initialize AOS (Animate On Scroll)
+
     AOS.init({
       duration: 800,
       once: true
     });
 
-
-
 // Mobile menu toggle
+
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
 
@@ -16,6 +16,7 @@
     });
 
     // Close menu when clicking on a link
+
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -60,14 +61,17 @@
         }
         
         // If all validations pass
+
         const successMessage = document.getElementById('form-success');
         successMessage.textContent = 'Message sent successfully!';
         successMessage.style.display = 'block';
         
         // Reset form
+
         contactForm.reset();
         
         // Hide success message after 5 seconds
+
         setTimeout(() => {
           successMessage.style.display = 'none';
         }, 5000);
@@ -75,6 +79,7 @@
     }
 
     // Smooth scroll for nav links
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
